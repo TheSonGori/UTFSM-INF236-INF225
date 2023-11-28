@@ -1,0 +1,65 @@
+/* App.css */
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border-radius: 8px;
+  width: 800px;
+  margin: 150px auto 0;
+}
+
+h2 {
+  font-size: 22px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="date"],
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Modificación del botón */
+button {
+  background-color: #058789; /* Cambia el color de fondo del botón */
+  color: #fff;
+  border: none;
+  padding: 10px 15px; /* Ajusta el padding según tu preferencia */
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #005b61; /* Cambia el color de fondo del botón al pasar el ratón por encima */
+}
+
+.results {
+  margin-top: 20px;
+}

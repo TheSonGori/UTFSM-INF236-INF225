@@ -1,0 +1,82 @@
+/* H3.css */
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #058789; /* Agrega el color de fondo deseado al encabezado */
+    padding: 10px; /* Puedes ajustar el padding según tus preferencias */
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+  }
+  
+  .logo-container img {
+    max-height: 80px; /* Ajusta la altura máxima según tu preferencia */
+  }
+  
+  .return-link a {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border-radius: 8px;
+    width: 300px; /* Puedes ajustar el ancho según tu preferencia */
+    margin: 150px auto 0; /* Centra el contenedor horizontalmente */
+  }
+  
+  h2 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 12px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="date"],
+  input[type="text"] {
+    width: calc(100% - 20px); /* Ajusta el ancho según tu preferencia y el padding */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #058789;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 4px;
+    display: block; /* Para que ocupe todo el ancho del contenedor */
+    margin: 0 auto; /* Centra el botón horizontalmente */
+  }
+  
+  button:hover {
+    background-color: #005b61;
+  }
