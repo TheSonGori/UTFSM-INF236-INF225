@@ -1,4 +1,4 @@
-# UTFSM - INF236
+# UTFSM - INF236 & INF225
 
 ## Link Repositorio
 https://github.com/Nachops/INF236P201G16
