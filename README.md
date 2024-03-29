@@ -6,7 +6,7 @@
 * Martín Pino - 202073528-k
 * **Tutor**: Nilsson Acevedo
 
-##Proyecto Continuado: Sistema de Gestión Hospitalaria
+## Proyecto Continuado: Sistema de Gestión Hospitalaria
 
 Descripción:
 
