@@ -10,7 +10,7 @@
 
 ### Descripción
 
-El proyecto base del semestre 2023-2 consistia en el desarrollo de un sistema de gestión hospitalaria para un hospital público a cargo del el profesor Alexis Henriquez Bugueño. El proyecto tiene como objetivo principal mejorar la eficiencia y la calidad de los servicios médicos ofrecidos por el hospital, así como optimizar los procesos administrativos asociados.
+El proyecto base del semestre 2023-2 consistia en el desarrollo de un sistema de gestión hospitalaria para un hospital público, este proyecto estaba a cargo del profesor Alexis Henriquez Bugueño. El proyecto tiene como objetivo principal mejorar la eficiencia y la calidad de los servicios médicos ofrecidos por el hospital, así como optimizar los procesos administrativos asociados.
 
 ### Características del Proyecto
 
