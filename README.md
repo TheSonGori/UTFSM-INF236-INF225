@@ -35,4 +35,4 @@ El proyecto que se continuará trabajando en el semestre 2024-1 es el Sistema de
 ## Link Repositorio Usado el Semestre Anterior
 https://github.com/Nachops/INF236P201G16
 
-*Se resubio el proyecto en un nuevo repositorio por cualquier error o si es que se llegase a borrar el anterior*
+*Resubimos el proyecto a un nuevo repositorio. Esto con el fin de implementar cambios significativos y evitar cualquier inconveniente relacionado con errores o la posibilidad de que se borre el repositorio anterior.*
