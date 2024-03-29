@@ -1,5 +1,9 @@
 # UTFSM - INF236 & INF225
 
+<p align="center">
+  <img src="https://github.com/TheSonGori/UTFSM-INF236-INF225/blob/main/client/public/Hospital.png" alt="Hospital Image" width="400">
+</p>
+
 ## Integrantes - Grupo 26
 * Javiera Gutiérrez - 202173626-3
 * Luciano Yevenes - 202173514-3
