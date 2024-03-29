@@ -32,7 +32,9 @@ El proyecto base del semestre 2023-2 consistia en el desarrollo de un sistema de
 
 El proyecto que se continuará trabajando en el semestre 2024-1 es el Sistema de Gestión Hospitalaria desarrollado durante el semestre anterior. Se seguirá iterando en su desarrollo, implementando nuevas funcionalidades y mejoras basadas en las necesidades identificadas durante el proceso inicial. El proyecto continuado representa una oportunidad para consolidar los avances logrados hasta el momento y llevar el sistema a un nivel de mayor funcionalidad y utilidad para el hospital y su comunidad.
 
-## Link Repositorio Usado el Semestre Anterior
-https://github.com/Nachops/INF236P201G16
+## Repositorio Usado el Semestre Anterior
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Nachops/INF236P201G16) **INF236P201G16** - Repositorio utilizado en el semestre anterior.
+
 
 *Resubimos el proyecto a un nuevo repositorio. Esto con el fin de implementar cambios significativos y evitar cualquier inconveniente relacionado con errores o la posibilidad de que se borre el repositorio anterior.*
