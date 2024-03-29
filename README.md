@@ -1,13 +1,13 @@
 # UTFSM - INF236 & INF225
 
 <p align="center">
-  <img src="https://github.com/TheSonGori/UTFSM-INF236-INF225/blob/main/client/public/Hospital.png" alt="Logo " width="300">
   <div align="center"><b>Logo Antiguo</b></div>
+  <img src="https://github.com/TheSonGori/UTFSM-INF236-INF225/blob/main/client/public/Hospital.png" alt="Logo " width="300">
 </p>
 
 <p align="center">
-  <img src="https://github.com/TheSonGori/UTFSM-INF236-INF225/blob/main/client/public/NewHospital.png" alt="Logo Nuevo" width="200">
   <div align="center"><b>Logo Nuevo</b></div>
+  <img src="https://github.com/TheSonGori/UTFSM-INF236-INF225/blob/main/client/public/NewHospital.png" alt="Logo Nuevo" width="200">
 </p>
 
 
