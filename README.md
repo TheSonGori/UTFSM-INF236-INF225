@@ -7,7 +7,7 @@
 
 <p align="center">
   <div align="center"><b>Logo Nuevo</b></div>
-   <div align="center"><img src="https://github.com/TheSonGori/UTFSM-INF236-INF225/blob/main/client/public/NewHospital.png" alt="Logo Nuevo" width="200"></div>
+   <div align="center"><img src="https://github.com/TheSonGori/UTFSM-INF236-INF225/blob/main/client/public/ReadmeLogoNew.png" alt="Logo Nuevo" width="200"></div>
 </p>
 
 
