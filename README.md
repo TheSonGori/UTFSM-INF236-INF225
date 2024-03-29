@@ -1,8 +1,15 @@
 # UTFSM - INF236 & INF225
 
 <p align="center">
-  <img src="https://github.com/TheSonGori/UTFSM-INF236-INF225/blob/main/client/public/Hospital.png" alt="Hospital Image" width="400">
+  <img src="https://github.com/TheSonGori/UTFSM-INF236-INF225/blob/main/client/public/Hospital.png" alt="Logo " width="300">
+  <div align="center"><b>Logo Antiguo</b></div>
 </p>
+
+<p align="center">
+  <img src="https://github.com/TheSonGori/UTFSM-INF236-INF225/blob/main/client/public/NewHospital.png" alt="Logo Nuevo" width="200">
+  <div align="center"><b>Logo Nuevo</b></div>
+</p>
+
 
 ## Integrantes - Grupo 26
 * Javiera Gutiérrez - 202173626-3
