@@ -39,7 +39,7 @@ El proyecto base del semestre 2023-2 consistia en el desarrollo de un sistema de
 
 El proyecto que se continuará trabajando en el semestre 2024-1 es el Sistema de Gestión Hospitalaria desarrollado durante el semestre anterior. Se seguirá iterando en su desarrollo, implementando nuevas funcionalidades y mejoras basadas en las necesidades identificadas durante el proceso inicial. El proyecto continuado representa una oportunidad para consolidar los avances logrados hasta el momento y llevar el sistema a un nivel de mayor funcionalidad y utilidad para el hospital y su comunidad.
 
-### Wiki
+## Wiki
 
 Puede acceder a la Wiki mediante el siguiente [enlace](https://github.com/TheSonGori/UTFSM-INF236-INF225/wiki/HITOS)
 
