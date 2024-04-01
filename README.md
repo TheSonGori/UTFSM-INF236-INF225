@@ -43,6 +43,11 @@ El proyecto que se continuará trabajando en el semestre 2024-1 es el Sistema de
 
 Puede acceder a los hitos mediante el siguiente [enlace](https://github.com/TheSonGori/UTFSM-INF236-INF225/wiki/HITOS)
 
+## Entrega Final INF236
+
+Aca se encuentra la entrega final de nuestro proyecto el semestre pasado donde se puede visualizar mejor nuestro proyecto    [![YouTube](https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/30px-YouTube_icon_%282013-2017%29.png)](https://www.youtube.com/watch?v=uOO9HsSicqI&ab_channel=ComaEtilicoINF236)
+
+
 ## Repositorio Usado el Semestre Anterior
 
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Nachops/INF236P201G16) **INF236P201G16** - Repositorio utilizado en el semestre anterior.
