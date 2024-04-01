@@ -45,7 +45,7 @@ Puede acceder a los hitos mediante el siguiente [enlace](https://github.com/TheS
 
 ## Entrega Final INF236
 
-[![YouTube](https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/30px-YouTube_icon_%282013-2017%29.png)](https://www.youtube.com/watch?v=uOO9HsSicqI&ab_channel=ComaEtilicoINF236) **H6 Y H7 - Entrega Final** Aca se encuentra la entrega final de nuestro proyecto el semestre pasado donde se puede visualizar mejor nuestro proyecto   
+[![YouTube](https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/30px-YouTube_icon_%282013-2017%29.png)](https://www.youtube.com/watch?v=uOO9HsSicqI&ab_channel=ComaEtilicoINF236) **H6 Y H7 - Entrega Final** Aca se encuentra la entrega final de nuestro proyecto del semestre pasado donde se puede visualizar mejor nuestro proyecto.
 
 
 ## Repositorio Usado el Semestre Anterior
