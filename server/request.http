@@ -1,2 +1,0 @@
-###
-GET http://localhost:5000/api/horario/filtrar?nombreUsuario=none&fecha=2023-12-03&tipo_examen=Radiografia HTTP/1.1
