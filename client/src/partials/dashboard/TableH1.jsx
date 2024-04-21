@@ -1,24 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import TransactionItem from './TableItemH1';
+import axios from 'axios';
 
 function TableH1({
-  selectedPrice, selectedDate, selectedItems
+  selectedPrice,
+  selectedDate,
+  selectedItems,
+  handleOpenModal 
 }) {
-  // Creamos el estado para las transacciones
   const [transactions, setTransactions] = useState([]);
-  {/*const [id_nousados, setId_nousados] = useState([]);*/}
-  const id_nousados = ['1']; // Lista de IDs a excluir
+  const [id_nousados, setId_nousados] = useState([]);
 
-  {/*
-  useEffect(() =>{
-    fetch(`http:localhost/${selectedPrice}/${selectedDate}/`)
-    .then((Response) => Response.json)
-    .then((id_nousados) => setId_nousados(id_nousados));
-  },[])
-  */}
-
-  // Cuando `selectedPrice` o `selectedDate` cambien, actualiza `transactions`
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `http://127.0.0.1:8000/api/examenes-medicos/${selectedDate}/${selectedPrice}/`
+        );
+        setId_nousados(response.data); // Almacena el resultado
+      } catch (error) {
+        console.error('Error al obtener datos:', error);
+      }
+    };
+    fetchData(); // Obtén datos cuando cambie `selectedDate` o `selectedPrice`
+  }, [selectedDate, selectedPrice]);
+
+  useEffect(() => {
+    // Asegúrate de que `id_nousados` esté en el formato correcto
+    const idsNoUsados = Array.isArray(id_nousados)
+      ? id_nousados.map((item) => item.hora_examen)
+      : [];
+
     const updatedTransactions = [
       {
         id: '0',
@@ -112,13 +124,13 @@ function TableH1({
       },
     ];
 
-    // Filtrar para excluir transacciones con IDs no usados
+    // Filtrar para excluir transacciones cuyos IDs están en `idsNoUsados`
     const filteredTransactions = updatedTransactions.filter(
-      (t) => !id_nousados.includes(t.id)
+      (t) => !idsNoUsados.includes(parseInt(t.id)) // Asegúrate de comparar enteros
     );
 
-    setTransactions(filteredTransactions);
-  }, [selectedPrice, selectedDate]);
+    setTransactions(filteredTransactions); // Actualiza el estado con las transacciones filtradas
+  }, [selectedPrice, selectedDate, id_nousados]); // Asegúrate de incluir `id_nousados` en las dependencias
 
   const [selectAll, setSelectAll] = useState(false);
   const [isCheck, setIsCheck] = useState([]);
@@ -139,7 +151,7 @@ function TableH1({
 
   useEffect(() => {
     selectedItems(isCheck);
-  }, [isCheck, selectedItems]);
+  }, [isCheck, selectedItems]); // Asegúrate de pasar el estado actualizado
 
   return (
     <div className="bg-white dark:bg-slate-900">
@@ -171,6 +183,7 @@ function TableH1({
                   date={transaction.date}
                   status={transaction.status}
                   handleClick={handleClick}
+                  handleOpenModal={handleOpenModal}
                   isChecked={isCheck.includes(transaction.id)}
                 />
               ))}

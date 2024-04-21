@@ -62,6 +62,8 @@ class ExamenMedicoList(View):
 
         data = list(examenes.values('hora_examen'))
 
+        print(data)
+
         return JsonResponse(data, safe=False)
     
 class ExamenMedicoAPIView(APIView):
