@@ -2,10 +2,20 @@ import React, { useState, useEffect } from 'react';
 import TransactionItem from './TableItemH1';
 
 function TableH1({
-   selectedPrice, selectedDate, selectedItems
+  selectedPrice, selectedDate, selectedItems
 }) {
   // Creamos el estado para las transacciones
   const [transactions, setTransactions] = useState([]);
+  {/*const [id_nousados, setId_nousados] = useState([]);*/}
+  const id_nousados = ['1']; // Lista de IDs a excluir
+
+  {/*
+  useEffect(() =>{
+    fetch(`http:localhost/${selectedPrice}/${selectedDate}/`)
+    .then((Response) => Response.json)
+    .then((id_nousados) => setId_nousados(id_nousados));
+  },[])
+  */}
 
   // Cuando `selectedPrice` o `selectedDate` cambien, actualiza `transactions`
   useEffect(() => {
@@ -13,36 +23,101 @@ function TableH1({
       {
         id: '0',
         name: selectedDate,
-        date: '09:30',
+        date: '08:30',
         status: selectedPrice,
       },
       {
         id: '1',
         name: selectedDate,
-        date: '10:30',
+        date: '09:00',
         status: selectedPrice,
       },
       {
         id: '2',
         name: selectedDate,
-        date: '11:30',
+        date: '09:30',
         status: selectedPrice,
       },
       {
         id: '3',
         name: selectedDate,
-        date: '12:30',
+        date: '10:00',
         status: selectedPrice,
       },
       {
         id: '4',
         name: selectedDate,
-        date: '13:30',
+        date: '10:30',
+        status: selectedPrice,
+      },
+      {
+        id: '5',
+        name: selectedDate,
+        date: '11:00',
+        status: selectedPrice,
+      },
+      {
+        id: '6',
+        name: selectedDate,
+        date: '11:30',
+        status: selectedPrice,
+      },
+      {
+        id: '7',
+        name: selectedDate,
+        date: '12:00',
+        status: selectedPrice,
+      },
+      {
+        id: '8',
+        name: selectedDate,
+        date: '12:30',
+        status: selectedPrice,
+      },
+      {
+        id: '9',
+        name: selectedDate,
+        date: '14:15',
+        status: selectedPrice,
+      },
+      {
+        id: '10',
+        name: selectedDate,
+        date: '14:45',
+        status: selectedPrice,
+      },
+      {
+        id: '11',
+        name: selectedDate,
+        date: '15:15',
+        status: selectedPrice,
+      },
+      {
+        id: '12',
+        name: selectedDate,
+        date: '15:45',
+        status: selectedPrice,
+      },
+      {
+        id: '13',
+        name: selectedDate,
+        date: '16:15',
+        status: selectedPrice,
+      },
+      {
+        id: '14',
+        name: selectedDate,
+        date: '16:45',
         status: selectedPrice,
       },
     ];
 
-    setTransactions(updatedTransactions);
+    // Filtrar para excluir transacciones con IDs no usados
+    const filteredTransactions = updatedTransactions.filter(
+      (t) => !id_nousados.includes(t.id)
+    );
+
+    setTransactions(filteredTransactions);
   }, [selectedPrice, selectedDate]);
 
   const [selectAll, setSelectAll] = useState(false);

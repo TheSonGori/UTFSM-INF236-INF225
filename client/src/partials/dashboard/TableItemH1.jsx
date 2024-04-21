@@ -1,4 +1,5 @@
 import React from 'react';
+import Sid from './SidBarH1';
 
 function TableItemH1(props) {
   return (
