@@ -47,9 +47,12 @@ function Dashboard() {
       <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
         {/* Header */}
         <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-
         <main className="grow">
           <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
+          {/* Left: Title */}
+          <div className="mb-4 sm:mb-6">
+            <h1 className="text-2xl md:text-3xl text-slate-800 dark:text-slate-100 font-bold">Reservar Horas ✨</h1>
+          </div>
             {/* Acciones */}
             <div className="sm:flex sm:justify-between sm:items-center mb-8">
               {/* Select para el precio */}
