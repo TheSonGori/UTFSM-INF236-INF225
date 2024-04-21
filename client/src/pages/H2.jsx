@@ -3,21 +3,16 @@ import React, { useState } from 'react';
 import Sidebar from '../partials/Sidebar';
 import Header from '../partials/Header';
 import Datepicker from '../components/Datepicker';
-import AnalyticsCard01 from '../partials/analytics/AnalyticsCard01';
-import AnalyticsCard02 from '../partials/analytics/AnalyticsCard02';
-import AnalyticsCard03 from '../partials/analytics/AnalyticsCard03';
-import AnalyticsCard04 from '../partials/analytics/AnalyticsCard04';
-import AnalyticsCard05 from '../partials/analytics/AnalyticsCard05';
-import AnalyticsCard06 from '../partials/analytics/AnalyticsCard06';
-import AnalyticsCard07 from '../partials/analytics/AnalyticsCard07';
-import AnalyticsCard08 from '../partials/analytics/AnalyticsCard08';
-import AnalyticsCard09 from '../partials/analytics/AnalyticsCard09';
-import AnalyticsCard10 from '../partials/analytics/AnalyticsCard10';
-import AnalyticsCard11 from '../partials/analytics/AnalyticsCard11';
+import TableH2 from '../partials/dashboard/TableH2';
 
 function Analytics() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [selectedItems, setSelectedItems] = useState([]);
+
+  const handleSelectedItems = (selectedItems) => {
+    setSelectedItems([...selectedItems]);
+  };
 
   return (
     <div className="flex h-[100dvh] overflow-hidden">
@@ -39,7 +34,7 @@ function Analytics() {
             
               {/* Left: Title */}
               <div className="mb-4 sm:mb-0">
-                <h1 className="text-2xl md:text-3xl text-slate-800 dark:text-slate-100 font-bold">Analytics ✨</h1>
+                <h1 className="text-2xl md:text-3xl text-slate-800 dark:text-slate-100 font-bold">Editar Citas ✨</h1>
               </div>
           
               {/* Right: Actions */}
@@ -50,33 +45,34 @@ function Analytics() {
                   
               </div>
             
-            </div>            
-            
-            {/* Cards */}
-            <div className="grid grid-cols-12 gap-6">
+            </div>
 
-              {/* Line chart (Analytics) */}
-              <AnalyticsCard01 />
-              {/*  Line chart (Active Users Right Now) */}
-              <AnalyticsCard02 />
-              {/* Stacked bar chart (Acquisition Channels) */}
-              <AnalyticsCard03 />
-              {/* Horizontal bar chart (Audience Overview) */}
-              <AnalyticsCard04 />
-              {/* Report card (Top Channels) */}
-              <AnalyticsCard05 />
-              {/* Report card (Top Pages) */}
-              <AnalyticsCard06 />
-              {/* Report card (Top Countries) */}
-              <AnalyticsCard07 />
-              {/* Doughnut chart (Sessions By Device) */}
-              <AnalyticsCard08 />
-              {/* Doughnut chart (Visit By Age Category) */}
-              <AnalyticsCard09 />
-              {/* Polar chart (Sessions By Gender) */}
-              <AnalyticsCard10 />
-              {/* Table (Top Products) */}
-              <AnalyticsCard11 />
+            {/* Filters */}
+            <div className="mb-5">
+              <ul className="flex flex-wrap -m-1">
+                <li className="m-1">
+                  <button className="inline-flex items-center justify-center text-sm font-medium leading-5 rounded-full px-3 py-1 border border-transparent shadow-sm bg-indigo-500 text-white duration-150 ease-in-out">
+                    Programadas
+                  </button>
+                </li>
+                <li className="m-1">
+                  <button className="inline-flex items-center justify-center text-sm font-medium leading-5 rounded-full px-3 py-1 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 shadow-sm bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 duration-150 ease-in-out">
+                    Re-agendadas
+                  </button>
+                </li>
+                <li className="m-1">
+                  <button className="inline-flex items-center justify-center text-sm font-medium leading-5 rounded-full px-3 py-1 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 shadow-sm bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 duration-150 ease-in-out">
+                    Canceladas
+                  </button>
+                </li>
+              </ul>
+            </div>        
+            
+            {/* Tabla H2*/}
+            <TableH2 selectedItems={handleSelectedItems} />
+
+            {/* Pagination */}
+            <div className="mt-8">
 
             </div>
 
