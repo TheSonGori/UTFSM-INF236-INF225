@@ -11,7 +11,7 @@ import './charts/ChartjsConfig';
 
 // Import pages
 import Principal from './pages/Principal';
-import Dashboard from './pages/Dashboard';
+import H1 from './pages/H1';
 import H2 from './pages/H2';
 import Fintech from './pages/Fintech';
 import Customers from './pages/ecommerce/Customers';
@@ -91,7 +91,7 @@ function App() {
     <>
       <Routes>
         <Route exact path="/" element={<Principal />} />
-        <Route path="/dashboard/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/h1" element={<H1 />} />
         <Route path="/dashboard/h2" element={<H2 />} />
         <Route path="/dashboard/fintech" element={<Fintech />} />
         <Route path="/ecommerce/customers" element={<Customers />} />
