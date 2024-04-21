@@ -10,6 +10,7 @@ import './css/style.css';
 import './charts/ChartjsConfig';
 
 // Import pages
+import Principal from './pages/Principal';
 import Dashboard from './pages/Dashboard';
 import Analytics from './pages/Analytics';
 import Fintech from './pages/Fintech';
@@ -89,7 +90,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<Dashboard />} />
+        <Route exact path="/" element={<Principal />} />
+        <Route path="/dashboard/dashboard" element={<Dashboard />} />
         <Route path="/dashboard/analytics" element={<Analytics />} />
         <Route path="/dashboard/fintech" element={<Fintech />} />
         <Route path="/ecommerce/customers" element={<Customers />} />
