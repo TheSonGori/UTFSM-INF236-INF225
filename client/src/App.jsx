@@ -12,7 +12,7 @@ import './charts/ChartjsConfig';
 // Import pages
 import Principal from './pages/Principal';
 import Dashboard from './pages/Dashboard';
-import Analytics from './pages/Analytics';
+import H2 from './pages/H2';
 import Fintech from './pages/Fintech';
 import Customers from './pages/ecommerce/Customers';
 import Orders from './pages/ecommerce/Orders';
@@ -92,7 +92,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Principal />} />
         <Route path="/dashboard/dashboard" element={<Dashboard />} />
-        <Route path="/dashboard/analytics" element={<Analytics />} />
+        <Route path="/dashboard/h2" element={<H2 />} />
         <Route path="/dashboard/fintech" element={<Fintech />} />
         <Route path="/ecommerce/customers" element={<Customers />} />
         <Route path="/ecommerce/orders" element={<Orders />} />
