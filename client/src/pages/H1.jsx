@@ -86,7 +86,7 @@ function Dashboard() {
       {/* Mostrar el modal si está abierto */}
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <SidebarH1 item={selectedItem} handleCloseModal={handleCloseModal} /> {/* Pasar el ítem completo */}
+          <SidebarH1 item={selectedItem} handleCloseModal={handleCloseModal}  /> {/* Pasar el ítem completo */}
           <button onClick={handleCloseModal} className="absolute top-0 right-0 m-4 text-white">Cerrar</button> {/* Botón para cerrar */}
         </div>
       )}
