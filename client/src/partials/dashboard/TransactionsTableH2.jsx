@@ -5,7 +5,7 @@ import Modal from 'react-modal';
 const customModalStyles = {
     content: {
         width: '500px',
-        height: '400px',
+        height: '500px',
         margin: 'auto',
         padding: '20px',
         borderRadius: '8px',
@@ -150,54 +150,77 @@ function TransactionsTableItem(props) {
                 contentLabel="Editar cita"
                 style={customModalStyles}
             >
-                <h2>Editar detalles de la cita</h2>
+                <h2 className="text-lg font-semibold text-slate-800 dark:text-white mb-4">
+                    Editar detalles de la cita ✨
+                </h2>
                 <form>
-                    <div>
-                        <label>Nombre:</label>
-                        <input
-                            type="text"
-                            name="name"
-                            value={personDetails.name}
-                            onChange={handleInputChange}
-                        />
+                    <div className="mb-4">
+                      <label className="block text-sm font-medium text-slate-700 dark:text-white mb-2">
+                        Nombre:
+                      </label>
+                    <input
+                        type="text"
+                        name="name"
+                        value={personDetails.name}
+                        onChange={handleInputChange}
+                        className="form-input w-full px-3 py-2 border rounded-md dark:bg-slate-800 dark:text-white"
+                    />
                     </div>
-                    <div>
-                        <label>Fecha:</label>
+
+                    <div className="mb-4">
+                        <label className="block text-sm font-medium text-slate-700 dark:text-white mb-2">
+                            Fecha:
+                        </label>
                         <input
                             type="date"
                             name="date"
                             value={personDetails.date}
                             onChange={handleInputChange}
+                            className="form-input w-full px-3 py-2 border rounded-md dark:bg-slate-800 dark:text-white"
                         />
                     </div>
-                    <div>
-                        <label>Estado:</label>
+
+                    <div className="mb-4">
+                        <label className="block text-sm font-medium text-slate-700 dark:text-white mb-2">
+                            Estado:
+                        </label>
                         <select
                             name="status"
                             value={personDetails.status}
                             onChange={handleInputChange}
+                            className="form-select w-full px-3 py-2 border rounded-md dark:bg-slate-800 dark:text-white"
                         >
                             <option value="Pendiente">Pendiente</option>
                             <option value="Completada">Completada</option>
                             <option value="Cancelada">Cancelada</option>
                         </select>
                     </div>
-                    <div>
-                        <label>Examen:</label>
+
+                    <div className="mb-4">
+                        <label className="block text-sm font-medium text-slate-700 dark:text-white mb-2">
+                            Examen:
+                        </label>
                         <input
                             type="text"
                             name="amount"
                             value={personDetails.amount}
                             onChange={handleInputChange}
+                            className="form-input w-full px-3 py-2 border rounded-md dark:bg-slate-800 dark:text-white"
                         />
                     </div>
+
                     <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>
-                        <button type="button" onClick={handleSaveChanges} style={{ marginRight: '10px' }}>
+                          <button
+                              type="button"
+                              onClick={props.handleSaveChanges}
+                              className="px-3 py-1 rounded-full text-sm font-medium bg-indigo-500 text-white">
                             Guardar cambios
                         </button>
-                        <button type="button" onClick={closeModal}>
-                            Cerrar
-                        </button>
+                        <button
+                            type="button"
+                            onClick={closeModal}
+                            className="px-3 py-1 rounded-full text-sm font-medium bg-white border border-slate-300 dark:bg-slate-800 dark:text-white"
+                        > Cerrar</button>
                     </div>
                 </form>
             </Modal>
