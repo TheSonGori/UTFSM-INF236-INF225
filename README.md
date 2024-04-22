@@ -40,7 +40,7 @@ El proyecto que se continuará trabajando en el semestre 2024-1 es el Sistema de
 
 ## Hitos
 
-Puede acceder a los hitos mediante el siguiente [enlace](https://github.com/TheSonGori/UTFSM-INF236-INF225/wiki/HITOS)
+Puede acceder a los hitos mediante el siguiente [enlace](https://github.com/TheSonGori/UTFSM-INF236-INF225/wiki)
 
 ## Entrega Final INF236
 
