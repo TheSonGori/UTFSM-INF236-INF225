@@ -1,7 +1,7 @@
 # UTFSM - INF236 & INF225
 <div align="center"><b>Logo Antiguo</b></div>
 <div align="center">
-  <img src="https://i.postimg.cc/wv4JV4sc/Hospital.png" alt="Hospital.png" width="400" height="200" />
+  <img src="https://i.postimg.cc/wv4JV4sc/Hospital.png" alt="Hospital.png" width="500" height="200" />
 </div>
 
 <div align="center"><b>Logo Nuevo</b></div>
