@@ -1,11 +1,14 @@
 # UTFSM - INF236 & INF225
 <div align="center"><b>Logo Antiguo</b></div>
-
-[![Hospital.png](https://i.postimg.cc/wv4JV4sc/Hospital.png)](https://postimg.cc/Hc5VW2zV)
+<div align="center">
+  <img src="https://i.postimg.cc/wv4JV4sc/Hospital.png" alt="Hospital.png" width="400" height="200" />
+</div>
 
 <div align="center"><b>Logo Nuevo</b></div>
+<div align="center">
+  <img src="https://i.postimg.cc/3RFfxTVr/New-Hospital.png" alt="New-Hospital.png" width="300" height="300" />
+</div>
 
-[![New-Hospital.png](https://i.postimg.cc/3RFfxTVr/New-Hospital.png)](https://postimg.cc/1n4rvLyb)
 
 ## Integrantes - Grupo 26
 * Javiera Gutiérrez - 202173626-3
