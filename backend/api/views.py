@@ -2,17 +2,41 @@
 # ID Paciente = 2
 
 from django.contrib.auth import authenticate
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
-from rest_framework.permissions import AllowAny
-from rest_framework.authtoken.models import Token
-from .serializers import *
-from django.utils.dateparse import parse_datetime
+from django.contrib.auth.hashers import make_password
 from django.http import JsonResponse
-from .models import *
-from .utils import *
+from django.utils.dateparse import parse_datetime
 from django.views import View
+
+from rest_framework.authtoken.models import Token
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework import status
+
+from .models import *
+from .serializers import *
+from .utils import *
+
+
+class ChangePasswordView(APIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        data = request.data
+        email = data.get('email', None)
+        new_password = data.get('new_password', None)
+
+        if email and new_password:
+            try:
+                user = User.objects.get(email=email)
+            except User.DoesNotExist:
+                return Response({"error": "User not found."}, status=status.HTTP_404_NOT_FOUND)
+            
+            user.password = make_password(new_password)
+            user.save()
+            return Response({"message": "Password changed successfully."}, status=status.HTTP_200_OK)
+
+        return Response({"error": "Email and new password are required."}, status=status.HTTP_400_BAD_REQUEST)
 
 class LoginView(APIView):
     permission_classes = [AllowAny]
@@ -51,13 +75,11 @@ class CreateUserView(APIView):
 
 class ExamenMedicoList(View):
     def get(self, request, tipo_de_examen, fecha_hora):
-        # Parsea la fecha_hora desde el string
         fecha_hora_parsed = parse_datetime(fecha_hora)
 
         if fecha_hora_parsed is None:
             return JsonResponse({'error': 'Formato de fecha incorrecto'}, status=400)
 
-        # Filtra los examenes por tipo de examen y la fecha y hora
         examenes = ExamenMedico.objects.filter(tipo_de_examen=tipo_de_examen, fecha_hora=fecha_hora_parsed)
 
         data = list(examenes.values('hora_examen'))
