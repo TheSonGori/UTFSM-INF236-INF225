@@ -5,10 +5,12 @@ import Header from '../partials/Header';
 import Datepicker from '../components/Datepicker';
 import TableH2 from '../partials/dashboard/TableH2';
 
+
 function Analytics() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [selectedItems, setSelectedItems] = useState([]);
+
 
   const handleSelectedItems = (selectedItems) => {
     setSelectedItems([...selectedItems]);
@@ -20,6 +22,7 @@ function Analytics() {
       {/* Sidebar */}
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
+      
       {/* Content area */}
       <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
 

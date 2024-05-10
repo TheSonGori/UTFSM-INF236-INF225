@@ -4,6 +4,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import SidebarLinkGroup from './SidebarLinkGroup';
 import Logo from '../images/Hospital.svg';
 
+
 function Sidebar({
   sidebarOpen,
   setSidebarOpen
@@ -11,6 +12,9 @@ function Sidebar({
 
   const location = useLocation();
   const { pathname } = location;
+
+  const tipoUsuario = sessionStorage.getItem('tipoUsuario');
+
 
   const trigger = useRef(null);
   const sidebar = useRef(null);
@@ -82,7 +86,7 @@ function Sidebar({
             </svg>
           </button>
           {/* Logo */}
-          <NavLink end to="/" className="block">
+          <NavLink end to="/dashboard/principal" className="block">
             <img src={Logo} alt="Descripción de la imagen" width="70" height="70" />
           </NavLink>
         </div>
@@ -157,6 +161,7 @@ function Sidebar({
                               </span>
                             </NavLink>
                           </li>
+                          {tipoUsuario=== "medico" ?(
                           <li className="mb-1 last:mb-0">
                             <NavLink
                               end
@@ -170,6 +175,9 @@ function Sidebar({
                               </span>
                             </NavLink>
                           </li>
+                          ):(
+                            ""
+                          )}
                           {/*<li className="mb-1 last:mb-0">
                             <NavLink
                               end

@@ -90,7 +90,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<Principal />} />
+        <Route exact path="/dashboard/principal" element={<Principal />} />
         <Route path="/dashboard/h1" element={<H1 />} />
         <Route path="/dashboard/h2" element={<H2 />} />
         <Route path="/dashboard/fintech" element={<Fintech />} />
@@ -136,7 +136,7 @@ function App() {
         <Route path="/utility/empty-state" element={<EmptyState />} />
         <Route path="/utility/404" element={<PageNotFound />} />
         <Route path="/utility/knowledge-base" element={<KnowledgeBase />} />
-        <Route path="/signin" element={<Signin />} />
+        <Route path="/" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/onboarding-01" element={<Onboarding01 />} />
