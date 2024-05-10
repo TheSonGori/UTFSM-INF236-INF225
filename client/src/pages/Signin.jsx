@@ -17,8 +17,8 @@ function Signin() {
       const response = await axios.post(
         `http://127.0.0.1:8000/api/login/`,
         {
-          correo: email,
-          clave: password,
+          "email": email,
+          "password": password,
         },
         {
           headers: {
@@ -29,7 +29,7 @@ function Signin() {
       if (response.status === 200) {
         sessionStorage.setItem('email', email);
         sessionStorage.setItem('Token', response.data.token);
-        sessionStorage.setItem('tipoUsuario', response.data.usetype);
+        sessionStorage.setItem('tipoUsuario', response.data.user_type);
         setTimeout(() => {
           navigate('/dashboard/principal');
         }, 2000);

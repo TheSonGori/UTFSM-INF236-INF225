@@ -14,7 +14,7 @@ function Sidebar({
   const { pathname } = location;
 
   const tipoUsuario = sessionStorage.getItem('tipoUsuario');
-
+  console.log(tipoUsuario);
 
   const trigger = useRef(null);
   const sidebar = useRef(null);
@@ -161,7 +161,7 @@ function Sidebar({
                               </span>
                             </NavLink>
                           </li>
-                          {tipoUsuario=== "medico" ?(
+                          {tipoUsuario === "medico" ?(
                           <li className="mb-1 last:mb-0">
                             <NavLink
                               end
