@@ -6,12 +6,15 @@ from django.contrib.auth.hashers import make_password
 from django.http import JsonResponse
 from django.utils.dateparse import parse_datetime
 from django.views import View
-
+from django.http import JsonResponse, HttpResponseNotAllowed
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_GET
+from django.utils.decorators import method_decorator
 
 from .models import *
 from .serializers import *
@@ -74,22 +77,49 @@ class CreateUserView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+@method_decorator(csrf_exempt, name='dispatch')
 class ExamenMedicoList(View):
-
-    http_method_names = ['get']
-
     def get(self, request, tipo_de_examen, fecha_hora):
+        print("Vista ExamenMedicoList llamada")
         fecha_hora_parsed = parse_datetime(fecha_hora)
+
         if fecha_hora_parsed is None:
             return JsonResponse({'error': 'Formato de fecha incorrecto'}, status=400)
+
         examenes = ExamenMedico.objects.filter(tipo_de_examen=tipo_de_examen, fecha_hora=fecha_hora_parsed)
+
         data = list(examenes.values('hora_examen'))
-        print(data)
+
         return JsonResponse(data, safe=False)
+    
+    def post(self, request, *args, **kwargs):
+        return HttpResponseNotAllowed(['GET'])
+
+    def put(self, request, *args, **kwargs):
+        return HttpResponseNotAllowed(['GET'])
+
+    def delete(self, request, *args, **kwargs):
+        return HttpResponseNotAllowed(['GET'])
     
 class ExamenMedicoAPIView(APIView):
     def post(self, request):
         dato = request.data
+        time={
+        "0": '08:30',
+        "1": '09:00',
+        "2": '09:30',
+        "3": '10:00',
+        "4": '10:30',
+        "5": '11:00',
+        "6": '11:30',
+        "7": '12:00',
+        "8": '12:30',
+        "9": '14:15',
+        "10": '14:45',
+        "11": '15:15',
+        "12": '15:45',
+        "13": '16:15',
+        "14": '16:45'}
         serializer = ExamenMedicoSerializer(data= request.data)
         if serializer.is_valid():
             serializer.save()
@@ -98,6 +128,6 @@ class ExamenMedicoAPIView(APIView):
             datosPaciente=datosPaciente[0]
             correo=NewUser.objects.filter(id=datosPaciente["usuario"]).values("email")
             correo=correo[0]["email"]
-            enviar_correo(correo, "Reserva Hora para examen de "+dato.get("tipo_de_examen")+".", "Estimad@ "+datosPaciente["nombre"]+" "+datosPaciente["apellido"]+".\nSu hora con fecha "+dato.get("fecha_hora") +" ha sido agendada correctamente." )
+            enviar_correo(correo, "Reserva Hora para examen de "+dato.get("tipo_de_examen")+".", "Estimad@ "+datosPaciente["nombre"]+" "+datosPaciente["apellido"]+".\nSu hora con fecha "+dato.get("fecha_hora") +" y hora "+time[str(dato.get("hora_examen"))]+" ha sido agendada correctamente." )
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

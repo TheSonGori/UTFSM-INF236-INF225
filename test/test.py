@@ -7,8 +7,8 @@ class ExamenesTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.base_url ='http://127.0.0.1:8000/api/examenes-medicos/'
-        cls.valid_url_empty_response=cls.base_url+'2020-10-10/Radiografia'
-        cls.valid_url_nonempty_response=cls.base_url+'2024-04-20/Ecografia'
+        cls.valid_url_empty_response=cls.base_url+'2020-10-10/Radiografia/'
+        cls.valid_url_nonempty_response=cls.base_url+'2024-04-20/Ecografia/'
         cls.valid_response_data=[
             {"hora_examen": 2 },
             {"hora_examen": 0},
@@ -25,7 +25,7 @@ class ExamenesTests(unittest.TestCase):
         self.assertEqual(404, response.status_code)
         
     def test_base_url_post(self):
-        response = requests.post(self.base_url)
+        response = requests.post(self.valid_url_nonempty_response)
         self.assertEqual(405, response.status_code)
 
 
