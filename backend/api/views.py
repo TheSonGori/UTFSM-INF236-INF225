@@ -75,18 +75,16 @@ class CreateUserView(APIView):
 
 
 class ExamenMedicoList(View):
+
+    http_method_names = ['get']
+
     def get(self, request, tipo_de_examen, fecha_hora):
         fecha_hora_parsed = parse_datetime(fecha_hora)
-
         if fecha_hora_parsed is None:
             return JsonResponse({'error': 'Formato de fecha incorrecto'}, status=400)
-
         examenes = ExamenMedico.objects.filter(tipo_de_examen=tipo_de_examen, fecha_hora=fecha_hora_parsed)
-
         data = list(examenes.values('hora_examen'))
-
         print(data)
-
         return JsonResponse(data, safe=False)
     
 class ExamenMedicoAPIView(APIView):
