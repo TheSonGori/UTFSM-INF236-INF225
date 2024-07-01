@@ -60,6 +60,7 @@ function DropdownNotifications({ align }) {
       >
         <div
           ref={dropdown}
+          role="menu"
           onFocus={() => setDropdownOpen(true)}
           onBlur={() => setDropdownOpen(false)}
         >

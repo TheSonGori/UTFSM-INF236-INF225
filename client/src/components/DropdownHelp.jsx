@@ -57,8 +57,8 @@ function DropdownHelp({ align }) {
         leaveEnd="opacity-0"
       >
         <div
-          role="trabajo"
           ref={dropdown}
+          role="menu"
           onFocus={() => setDropdownOpen(true)}
           onBlur={() => setDropdownOpen(false)}
         >
