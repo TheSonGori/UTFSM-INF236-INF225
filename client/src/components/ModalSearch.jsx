@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Transition from '../utils/Transition';
 
 function ModalSearch({
@@ -238,5 +239,12 @@ function ModalSearch({
     </>
   );
 }
+
+ModalSearch.propTypes = {
+  id: PropTypes.string.isRequired,
+  searchId: PropTypes.string.isRequired,
+  modalOpen: PropTypes.bool.isRequired,
+  setModalOpen: PropTypes.func.isRequired,
+};
 
 export default ModalSearch;
