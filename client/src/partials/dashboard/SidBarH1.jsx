@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 
 function SidebarH1({ item, handleCloseModal }) {
@@ -55,7 +56,7 @@ function SidebarH1({ item, handleCloseModal }) {
           <label className={`text-sm font-medium ${labelWidth}`} htmlFor="rut">RUT:</label>
           <input
             id="rut"
-            class="form-input w-full"
+            className="form-input w-full"
             type="text"
             value={rut}
             onChange={(e) => setRut(e.target.value)}
@@ -66,7 +67,7 @@ function SidebarH1({ item, handleCloseModal }) {
           <label className={`text-sm font-medium ${labelWidth}`} htmlFor="correo">Correo:</label>
           <input
             id="correo"
-            class="form-input w-full"
+            className="form-input w-full"
             type="email"
             value={correo}
             onChange={(e) => setCorreo(e.target.value)}
@@ -118,5 +119,15 @@ function SidebarH1({ item, handleCloseModal }) {
     </div>
   );
 }
+
+SidebarH1.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    date: PropTypes.string,
+    status: PropTypes.string,
+  }),
+  handleCloseModal: PropTypes.func.isRequired,
+};
 
 export default SidebarH1;
