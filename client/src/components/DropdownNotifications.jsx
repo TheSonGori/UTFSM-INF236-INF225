@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Transition from '../utils/Transition';
+import PropTypes from 'prop-types';
 
-function DropdownNotifications({
-  align
-}) {
+function DropdownNotifications({ align }) {
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -102,5 +101,9 @@ function DropdownNotifications({
     </div>
   )
 }
+
+DropdownNotifications.propTypes = {
+  align: PropTypes.string,
+};
 
 export default DropdownNotifications;
