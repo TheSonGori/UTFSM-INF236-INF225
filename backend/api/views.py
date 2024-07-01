@@ -16,9 +16,9 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_GET
 from django.utils.decorators import method_decorator
 
-from .models import *
-from .serializers import *
-from .utils import *
+from .models import NewUser, Paciente,ExamenMedico
+from .serializers import UserCreationSerializer, ExamenMedicoSerializer
+from .utils import enviar_correo
 
 
 class ChangePasswordView(APIView):
