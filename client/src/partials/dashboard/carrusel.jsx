@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Imgen1 from "../../images/imagen1.png";
 import Imgen2 from "../../images/imagen2.png";
 import Imgen3 from "../../images/imagen3.png";
+import "../../css/Carousel.css"; 
 
 class Carousel extends React.Component {
   render() {
@@ -17,11 +18,6 @@ class Carousel extends React.Component {
       autoplaySpeed: 4000, // Cambiar cada 2 segundos
       slidesToShow: 1,
       slidesToScroll: 1
-    };
-
-    // Color fijo para las flechas
-    const arrowColor = {
-      color: "#555" // Puedes ajustar el color gris según tu preferencia
     };
 
     // Estilos para las imágenes
@@ -47,13 +43,6 @@ class Carousel extends React.Component {
             </div>
           </Slider>
         </div>
-        {/* Agregar estilos para las flechas */}
-        <style jsx>{`
-          .carousel-container .slick-prev,
-          .carousel-container .slick-next {
-            color: ${arrowColor.color} !important;
-          }
-        `}</style>
       </div>
     );
   }
