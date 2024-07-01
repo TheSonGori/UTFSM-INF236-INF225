@@ -2,7 +2,7 @@ import React from 'react';
 import Flatpickr from 'react-flatpickr';
 
 function Datepicker({
-  align
+  align: string
 }) {
 
   const options = {
