@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import TransactionItem from './TableItemH1';
 import axios from 'axios';
 
@@ -194,5 +195,12 @@ function TableH1({
     </div>
   );
 }
+
+TableH1.propTypes = {
+  selectedPrice: PropTypes.string.isRequired,
+  selectedDate: PropTypes.string.isRequired,
+  selectedItems: PropTypes.func.isRequired,
+  handleOpenModal: PropTypes.func.isRequired,
+};
 
 export default TableH1;
