@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 
 // Estilos personalizados del modal
@@ -23,7 +24,6 @@ const convertToISODate = (date) => {
   // Retorna la fecha en formato ISO 8601 (YYYY-MM-DD)
   return `${year}-${month}-${day}`;
 };
-
 
 function TransactionsTableItem(props) {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -61,25 +61,23 @@ function TransactionsTableItem(props) {
     };
 
     const convertToDisplayDate = (date) => {
-      const [year, month, day] = date.split('-');
-      return `${day}/${month}/${year}`;
+        const [year, month, day] = date.split('-');
+        return `${day}/${month}/${year}`;
     };
-  
 
     const handleSaveChanges = () => {
-      // Convierte la fecha a formato DD/MM/YYYY antes de pasarla a props.onEdit
-      const updatedDetails = {
-          ...personDetails,
-          date: convertToDisplayDate(personDetails.date),
-      };
-  
-      // Llama a la función de callback para guardar los cambios
-      props.onEdit(props.id, updatedDetails);
-  
-      // Cierra el modal
-      closeModal();
+        // Convierte la fecha a formato DD/MM/YYYY antes de pasarla a props.onEdit
+        const updatedDetails = {
+            ...personDetails,
+            date: convertToDisplayDate(personDetails.date),
+        };
+
+        // Llama a la función de callback para guardar los cambios
+        props.onEdit(props.id, updatedDetails);
+
+        // Cierra el modal
+        closeModal();
     };
-  
 
     const statusColor = (status) => {
         switch (status) {
@@ -231,5 +229,17 @@ function TransactionsTableItem(props) {
         </>
     );
 }
+
+TransactionsTableItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  isChecked: PropTypes.bool.isRequired,
+  name: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
+  onEdit: PropTypes.func.isRequired,
+};
 
 export default TransactionsTableItem;
