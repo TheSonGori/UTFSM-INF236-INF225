@@ -21,7 +21,7 @@
 .flatpickr-calendar {
     border: inherit;
     @apply bg-white dark:bg-slate-800 rounded shadow-lg border border-slate-200 dark:border-slate-700 left-1/2;
-    margin-left: calc(calc(var(--daysWidth) + calc(var(--calendarPadding)*2))*0.5*-1);
+    margin-left: calc((var(--daysWidth) + calc(var(--calendarPadding) * 2)) * -0.5);
     padding: var(--calendarPadding);
     width: calc(var(--daysWidth) + calc(var(--calendarPadding)*2));
 }
