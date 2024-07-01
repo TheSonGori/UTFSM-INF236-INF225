@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TransactionItem from './TransactionsTableH2';
 import Image01 from '../../images/H2User.png';
+import PropTypes from 'prop-types';
 
 function TransactionsTable({ selectedItems }) {
     const initialTransactions = [
@@ -191,5 +192,9 @@ function TransactionsTable({ selectedItems }) {
         </div>
     );
 }
+
+TransactionsTable.propTypes = {
+    selectedItems: PropTypes.func.isRequired,
+  };
 
 export default TransactionsTable;
