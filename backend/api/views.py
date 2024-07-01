@@ -15,7 +15,7 @@ from rest_framework import status
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_GET
 from django.utils.decorators import method_decorator
-
+from django.contrib.auth.models import User
 from .models import NewUser, Paciente,ExamenMedico
 from .serializers import UserCreationSerializer, ExamenMedicoSerializer
 from .utils import enviar_correo
@@ -31,8 +31,8 @@ class ChangePasswordView(APIView):
 
         if email and new_password:
             try:
-                user = User.objects.get(email=email)
-            except User.DoesNotExist:
+                user = NewUser.objects.get(email=email)
+            except NewUser.DoesNotExist:
                 return Response({"error": "User not found."}, status=status.HTTP_404_NOT_FOUND)
             
             user.password = make_password(new_password)
