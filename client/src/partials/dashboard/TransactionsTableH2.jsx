@@ -155,23 +155,25 @@ function TransactionsTableItem(props) {
                 </h2>
                 <form>
                     <div className="mb-4">
-                      <label className="block text-sm font-medium text-slate-700 dark:text-white mb-2">
-                        Nombre:
-                      </label>
-                    <input
-                        type="text"
-                        name="name"
-                        value={personDetails.name}
-                        onChange={handleInputChange}
-                        className="form-input w-full px-3 py-2 border rounded-md dark:bg-slate-800 dark:text-white"
-                    />
+                        <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-white mb-2">
+                            Nombre:
+                        </label>
+                        <input
+                            id="name"
+                            type="text"
+                            name="name"
+                            value={personDetails.name}
+                            onChange={handleInputChange}
+                            className="form-input w-full px-3 py-2 border rounded-md dark:bg-slate-800 dark:text-white"
+                        />
                     </div>
 
                     <div className="mb-4">
-                        <label className="block text-sm font-medium text-slate-700 dark:text-white mb-2">
+                        <label htmlFor="date" className="block text-sm font-medium text-slate-700 dark:text-white mb-2">
                             Fecha:
                         </label>
                         <input
+                            id="date"
                             type="date"
                             name="date"
                             value={personDetails.date}
@@ -181,10 +183,11 @@ function TransactionsTableItem(props) {
                     </div>
 
                     <div className="mb-4">
-                        <label className="block text-sm font-medium text-slate-700 dark:text-white mb-2">
+                        <label htmlFor="status" className="block text-sm font-medium text-slate-700 dark:text-white mb-2">
                             Estado:
                         </label>
                         <select
+                            id="status"
                             name="status"
                             value={personDetails.status}
                             onChange={handleInputChange}
@@ -197,10 +200,11 @@ function TransactionsTableItem(props) {
                     </div>
 
                     <div className="mb-4">
-                        <label className="block text-sm font-medium text-slate-700 dark:text-white mb-2">
+                        <label htmlFor="amount" className="block text-sm font-medium text-slate-700 dark:text-white mb-2">
                             Examen:
                         </label>
                         <input
+                            id="amount"
                             type="text"
                             name="amount"
                             value={personDetails.amount}
@@ -212,7 +216,7 @@ function TransactionsTableItem(props) {
                     <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'space-between' }}>
                           <button
                               type="button"
-                              onClick={props.handleSaveChanges}
+                              onClick={handleSaveChanges}
                               className="px-3 py-1 rounded-full text-sm font-medium bg-indigo-500 text-white">
                             Guardar cambios
                         </button>
