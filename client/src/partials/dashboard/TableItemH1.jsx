@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function TableItemH1({ id, name, date, status, handleOpenModal }) {
   return (
@@ -27,5 +28,13 @@ function TableItemH1({ id, name, date, status, handleOpenModal }) {
     </tr>
   );
 }
+
+TableItemH1.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
+  handleOpenModal: PropTypes.func.isRequired,
+};
 
 export default TableItemH1;
