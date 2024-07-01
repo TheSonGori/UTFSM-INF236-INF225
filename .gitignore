@@ -2,3 +2,4 @@ Hospital
 venv
 __pycache__
 migrations
+.env
