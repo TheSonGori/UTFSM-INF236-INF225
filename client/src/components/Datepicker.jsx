@@ -1,7 +1,8 @@
 import React from 'react';
 import Flatpickr from 'react-flatpickr';
+import PropTypes from 'prop-types';
 
-function Datepicker({ align = '' }) {
+function Datepicker({ align }) {
 
   const options = {
     mode: 'range',
@@ -32,5 +33,9 @@ function Datepicker({ align = '' }) {
     </div>
   );
 }
+
+Datepicker.propTypes = {
+  align: PropTypes.string,
+};
 
 export default Datepicker;
