@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Transition from '../utils/Transition';
+import PropTypes from 'prop-types';
 
-function DropdownHelp({
-  align
-}) {
+function DropdownHelp({ align }) {
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -108,5 +107,9 @@ function DropdownHelp({
     </div>
   )
 }
+
+DropdownHelp.propTypes = {
+  align: PropTypes.string,
+};
 
 export default DropdownHelp;
