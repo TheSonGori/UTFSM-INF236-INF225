@@ -1,0 +1,4 @@
+.carousel-container .slick-prev,
+.carousel-container .slick-next {
+  color: #555 !important; /* Ajusta el color según tu preferencia */
+}
